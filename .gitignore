@@ -1,0 +1,6 @@
+/Debug
+/Release
+/.vs
+/**/*.tmx
+/**/*.tsx
+settings.txt

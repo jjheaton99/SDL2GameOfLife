@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\Entities\GameObject.cpp" />
+    <ClCompile Include="source\Entities\GameObjectManager.cpp" />
+    <ClCompile Include="source\Entities\TextureObject.cpp" />
+    <ClCompile Include="source\Game.cpp" />
+    <ClCompile Include="source\GameStates\GameState.cpp" />
+    <ClCompile Include="source\GameStates\SControls.cpp" />
+    <ClCompile Include="source\GameStates\SGameOver.cpp" />
+    <ClCompile Include="source\GameStates\SMainMenu.cpp" />
+    <ClCompile Include="source\GameStates\SPaused.cpp" />
+    <ClCompile Include="source\GameStates\SPlayGame.cpp" />
+    <ClCompile Include="source\GameStates\SQuit.cpp" />
+    <ClCompile Include="source\GameStates\SSettings.cpp" />
+    <ClCompile Include="source\GameStates\StateMachine.cpp" />
+    <ClCompile Include="source\main.cpp" />
+    <ClCompile Include="source\Mapping\Camera.cpp" />
+    <ClCompile Include="source\Misc\Collider.cpp" />
+    <ClCompile Include="source\Misc\Constants.cpp" />
+    <ClCompile Include="source\Misc\GameOfLife.cpp" />
+    <ClCompile Include="source\Misc\GlobalObjects.cpp" />
+    <ClCompile Include="source\Misc\MenuButton.cpp" />
+    <ClCompile Include="source\Misc\Random.cpp" />
+    <ClCompile Include="source\Misc\SoundEffect.cpp" />
+    <ClCompile Include="source\Wrappers\WTexture.cpp" />
+    <ClCompile Include="source\Wrappers\WTimer.cpp" />
+    <ClCompile Include="source\Wrappers\WWindow.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\Entities\GameObject.h" />
+    <ClInclude Include="source\Entities\GameObjectManager.h" />
+    <ClInclude Include="source\Entities\TextureObject.h" />
+    <ClInclude Include="source\Game.h" />
+    <ClInclude Include="source\GameStates\GameState.h" />
+    <ClInclude Include="source\GameStates\SControls.h" />
+    <ClInclude Include="source\GameStates\SGameOver.h" />
+    <ClInclude Include="source\GameStates\SMainMenu.h" />
+    <ClInclude Include="source\GameStates\SPaused.h" />
+    <ClInclude Include="source\GameStates\SPlayGame.h" />
+    <ClInclude Include="source\GameStates\SQuit.h" />
+    <ClInclude Include="source\GameStates\SSettings.h" />
+    <ClInclude Include="source\GameStates\StateMachine.h" />
+    <ClInclude Include="source\Mapping\Camera.h" />
+    <ClInclude Include="source\Misc\Collider.h" />
+    <ClInclude Include="source\Misc\Constants.h" />
+    <ClInclude Include="source\Misc\GameOfLife.h" />
+    <ClInclude Include="source\Misc\GlobalObjects.h" />
+    <ClInclude Include="source\Misc\MenuButton.h" />
+    <ClInclude Include="source\Misc\Random.h" />
+    <ClInclude Include="source\Misc\SoundEffect.h" />
+    <ClInclude Include="source\Misc\Vector2D.h" />
+    <ClInclude Include="source\Wrappers\WTexture.h" />
+    <ClInclude Include="source\Wrappers\WTimer.h" />
+    <ClInclude Include="source\Wrappers\WWindow.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{b4520833-35e9-41c5-b762-7e2ef8fecaf2}</ProjectGuid>
+    <RootNamespace>SDL2GameOfLife</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>source\Wrappers;source\Misc;source\Mapping;source\GameStates;source\Entities;C:\Program Files %28x86%29\Microsoft Visual Studio\2019\Community\Development libraries\SDL2_ttf-2.0.15\include;C:\Program Files %28x86%29\Microsoft Visual Studio\2019\Community\Development libraries\SDL2_mixer-2.0.4\include;C:\Program Files %28x86%29\Microsoft Visual Studio\2019\Community\Development libraries\SDL2_image-2.0.5\include;C:\Program Files %28x86%29\Microsoft Visual Studio\2019\Community\Development libraries\SDL2-2.0.12\include;dlls;source;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft Visual Studio\2019\Community\Development libraries\SDL2_ttf-2.0.15\lib\x86;C:\Program Files %28x86%29\Microsoft Visual Studio\2019\Community\Development libraries\SDL2_mixer-2.0.4\lib\x86;C:\Program Files %28x86%29\Microsoft Visual Studio\2019\Community\Development libraries\SDL2_image-2.0.5\lib\x86;C:\Program Files %28x86%29\Microsoft Visual Studio\2019\Community\Development libraries\SDL2-2.0.12\lib\x86;$(LibraryPath)</LibraryPath>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\jj_he\source\repos\SDL\SDL2_Engine\Wrappers;C:\Users\jj_he\source\repos\SDL\SDL2_Engine\Misc;C:\Users\jj_he\source\repos\SDL\SDL2_Engine\Mapping;C:\Users\jj_he\source\repos\SDL\SDL2_Engine\GameStates;C:\Users\jj_he\source\repos\SDL\SDL2_Engine\Entities;C:\Program Files %28x86%29\Microsoft Visual Studio\2019\Community\Development libraries\SDL2_ttf-2.0.15\include;C:\Program Files %28x86%29\Microsoft Visual Studio\2019\Community\Development libraries\SDL2_mixer-2.0.4\include;C:\Program Files %28x86%29\Microsoft Visual Studio\2019\Community\Development libraries\SDL2_image-2.0.5\include;C:\Program Files %28x86%29\Microsoft Visual Studio\2019\Community\Development libraries\SDL2-2.0.12\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft Visual Studio\2019\Community\Development libraries\SDL2_ttf-2.0.15\lib\x86;C:\Program Files %28x86%29\Microsoft Visual Studio\2019\Community\Development libraries\SDL2_mixer-2.0.4\lib\x86;C:\Program Files %28x86%29\Microsoft Visual Studio\2019\Community\Development libraries\SDL2_image-2.0.5\lib\x86;C:\Program Files %28x86%29\Microsoft Visual Studio\2019\Community\Development libraries\SDL2-2.0.12\lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>source\Wrappers;source\Misc;source\Mapping;source\GameStates;source\Entities;C:\Program Files %28x86%29\Microsoft Visual Studio\2019\Community\Development libraries\SDL2_ttf-2.0.15\include;C:\Program Files %28x86%29\Microsoft Visual Studio\2019\Community\Development libraries\SDL2_mixer-2.0.4\include;C:\Program Files %28x86%29\Microsoft Visual Studio\2019\Community\Development libraries\SDL2_image-2.0.5\include;C:\Program Files %28x86%29\Microsoft Visual Studio\2019\Community\Development libraries\SDL2-2.0.12\include;dlls;source;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft Visual Studio\2019\Community\Development libraries\SDL2_ttf-2.0.15\lib\x86;C:\Program Files %28x86%29\Microsoft Visual Studio\2019\Community\Development libraries\SDL2_mixer-2.0.4\lib\x86;C:\Program Files %28x86%29\Microsoft Visual Studio\2019\Community\Development libraries\SDL2_image-2.0.5\lib\x86;C:\Program Files %28x86%29\Microsoft Visual Studio\2019\Community\Development libraries\SDL2-2.0.12\lib\x86;$(LibraryPath)</LibraryPath>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Users\jj_he\source\repos\SDL\SDL2_Engine\Wrappers;C:\Users\jj_he\source\repos\SDL\SDL2_Engine\Misc;C:\Users\jj_he\source\repos\SDL\SDL2_Engine\Mapping;C:\Users\jj_he\source\repos\SDL\SDL2_Engine\GameStates;C:\Users\jj_he\source\repos\SDL\SDL2_Engine\Entities;C:\Program Files %28x86%29\Microsoft Visual Studio\2019\Community\Development libraries\SDL2_ttf-2.0.15\include;C:\Program Files %28x86%29\Microsoft Visual Studio\2019\Community\Development libraries\SDL2_mixer-2.0.4\include;C:\Program Files %28x86%29\Microsoft Visual Studio\2019\Community\Development libraries\SDL2_image-2.0.5\include;C:\Program Files %28x86%29\Microsoft Visual Studio\2019\Community\Development libraries\SDL2-2.0.12\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft Visual Studio\2019\Community\Development libraries\SDL2_ttf-2.0.15\lib\x86;C:\Program Files %28x86%29\Microsoft Visual Studio\2019\Community\Development libraries\SDL2_mixer-2.0.4\lib\x86;C:\Program Files %28x86%29\Microsoft Visual Studio\2019\Community\Development libraries\SDL2_image-2.0.5\lib\x86;C:\Program Files %28x86%29\Microsoft Visual Studio\2019\Community\Development libraries\SDL2-2.0.12\lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <DisableSpecificWarnings>26812;26495;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_ttf.lib;SDL2_mixer.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_ttf.lib;SDL2_mixer.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <DisableSpecificWarnings>26812;26495;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_ttf.lib;SDL2_mixer.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_ttf.lib;SDL2_mixer.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
